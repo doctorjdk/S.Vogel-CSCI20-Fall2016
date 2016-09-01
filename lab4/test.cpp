@@ -8,5 +8,7 @@ int main () {
     
     cout<<"Type your name: ";
     cin>>userName;
+    cout<< 4%5;
+    
     
 }
