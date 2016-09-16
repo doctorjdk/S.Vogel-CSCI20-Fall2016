@@ -4,11 +4,13 @@ using namespace std;
 
 int main () {
     
-    string userName;
-    
-    cout<<"Type your name: ";
-    cin>>userName;
-    cout<< 4%5;
+    double Integer (double x, double y, double z);
+
+    x = 1;
+    y = 2;
+    z = 3;
+
+    cout << Integer;
     
     
 }
