@@ -2,15 +2,15 @@
 #include <string>
 using namespace std;
 
-int main () {
-    
-    double Integer (double x, double y, double z);
 
-    x = 1;
-    y = 2;
-    z = 3;
+double VolumeBox(double length, double width, double height)
+{
+    double BoxVol;
+    BoxVol = length * width * height;
+    return BoxVol;
+}
 
-    cout << Integer;
+int main() {
     
-    
+    cout << VolumeBox(3,1,2*5) << " meters squared." << endl;
 }
