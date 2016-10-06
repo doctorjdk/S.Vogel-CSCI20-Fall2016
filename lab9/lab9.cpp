@@ -16,7 +16,8 @@ class TemperatureConverter {
         TemperatureConverter(double kelvin_);
         
         void PrintTemperatures();
-        
+    
+    private: 
         double degKelvin;
         double degCelsius;
         double degFahrenheit;
@@ -84,25 +85,3 @@ void TemperatureConverter::PrintTemperatures() {
 
 
 
-int main () {
-    
-    TemperatureConverter temp1;
-    TemperatureConverter temp2(274);
-    
-    temp1.PrintTemperatures();
-    temp2.PrintTemperatures();
-    
-    temp1.SetTempFromKelvin(400.15);
-    cout << temp1.GetTempFromKelvin() << endl;
-    temp1.PrintTemperatures();
-    
-    temp2.SetTempFromCelsius(32);
-    cout << temp2.GetTempAsCelsius() << endl;
-    temp2.PrintTemperatures();
-    
-    temp2.SetTempFromFahrenheit(32);
-    cout << temp2.GetTempAsFahrenheit() << endl;
-    temp2.PrintTemperatures();
-    
-    
-}
