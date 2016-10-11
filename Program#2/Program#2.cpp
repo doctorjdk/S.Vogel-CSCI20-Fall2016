@@ -44,7 +44,8 @@ class Weight {
         
         Weight();
         Weight(double pounds, double accConstant);
-        
+       
+    private:  
         double accConstant;
         double userAcc;
         double pounds;

@@ -43,18 +43,21 @@ bool isQ6 (int variable) {
     else return false;
 }
 
+//QUESTION 7
 bool isQ7 (int a) {
     if (((a / 4) < 8) && a >=4)
         return true;
     else return false;
 }
 
+//QUESTION 8
 bool isQ8 (int x, int y, int z) {
     if ((x * y) < 10 || (y * z) < 10)
         return true;
     else return false;
 }
 
+//QUESTION 9
 bool isQ9 (int j, int k, int l) {
     if ((!(j * l) < 10) || (k / j) * 4 < k * 2)
         return true;
