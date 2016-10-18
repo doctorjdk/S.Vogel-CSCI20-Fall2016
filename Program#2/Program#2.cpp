@@ -46,20 +46,8 @@ class Weight {
         Weight(double pounds, double accConstant);
        
     private:  
-        double accConstant;
         double userAcc;
-        double pounds;
         double userPounds;
-        double weightFeltEarth;
-        double weightFeltMars;
-        double weightFeltJupiter;
-        double weightFeltMoon;
-        double weightFeltVenus;
-        double weightFeltUranus;
-        double weightFeltNeptune;
-        double weightFeltMercury;
-        double weightFeltSaturn;
-        double weightFeltPluto;
         
 };
 //CONSTRUCTORS
@@ -78,105 +66,105 @@ Weight::Weight(double pounds, double accConstant) {
 
 //EARTH 
 void Weight::SetEarthWeight(double pounds, double accConstant) {
-    weightFeltEarth = (pounds / accConstant) * EARTH_AG;
+    userPounds = (pounds / accConstant) * EARTH_AG;
     return;
     }
 
 double Weight::GetEarthWeight()  {
-    return weightFeltEarth; 
+    return userPounds; 
     }
 
 
 //MARS
 void Weight::SetMarsWeight (double pounds, double accConstant) {
-    weightFeltMars = (pounds / accConstant) * MARS_AG;
+    userPounds = (pounds / accConstant) * MARS_AG;
     return;
     }
 
 double Weight::GetMarsWeight() {
-    return weightFeltMars;
+    return userPounds;
     }
     
 
 //JUPITER
 void Weight::SetJupiterWeight (double pounds, double accConstant) {
-    weightFeltJupiter = (pounds / accConstant) * JUPITER_AG;
+    userPounds = (pounds / accConstant) * JUPITER_AG;
     return;
     }
 
 double Weight::GetJupiterWeight() {
-    return weightFeltJupiter;
+    return userPounds;
     }
     
 
 //MOON
 void Weight::SetMoonWeight (double pounds, double accConstant) {
-    weightFeltMoon = (pounds / accConstant) * MOON_AG;
+    userPounds = (pounds / accConstant) * MOON_AG;
     return;
     }
 
 double Weight::GetMoonWeight() {
-    return weightFeltMoon;
+    return userPounds;
     }
     
 //VENUS
 void Weight::SetVenusWeight (double pounds, double accConstant) {
-    weightFeltVenus = (pounds / accConstant) * VENUS_AG;
+    userPounds = (pounds / accConstant) * VENUS_AG;
     return;
     }
 
 double Weight::GetVenusWeight() {
-    return weightFeltVenus;
+    return userPounds;
     }
 
 //URANUS
 void Weight::SetUranusWeight (double pounds, double accConstant) {
-    weightFeltUranus = (pounds / accConstant) * URANUS_AG;
+    userPounds = (pounds / accConstant) * URANUS_AG;
     return;
     }
     
 double Weight::GetUranusWeight() {
-    return weightFeltVenus;
+    return userPounds;
     }
     
 //NEPTUNE
 void Weight::SetNeptuneWeight(double pounds, double accConstant) {
-    weightFeltNeptune = (pounds / accConstant) * NEPTUNE_AG;
+    userPounds = (pounds / accConstant) * NEPTUNE_AG;
     return;
     }
 
 double Weight::GetNeptuneWeight() {
-    return weightFeltNeptune;
+    return userPounds;
     }
 
 //MERCURY
 void Weight::SetMercuryWeight (double pounds, double accConstant) {
-    weightFeltMercury = (pounds / accConstant) * MERCURY_AG;
+    userPounds = (pounds / accConstant) * MERCURY_AG;
     return;
     }
 
 double Weight::GetMercuryWeight() {
-    return weightFeltMercury;
+    return userPounds;
     }
 
 //SATURN
 void Weight::SetSaturnWeight (double pounds, double accConstant) {
-    weightFeltSaturn = (pounds / accConstant) * SATURN_AG;
+    userPounds = (pounds / accConstant) * SATURN_AG;
     return;
     }
 
 double Weight::GetSaturnWeight() {
-    return weightFeltSaturn;
+    return userPounds;
     }
     
 //PLUTO
 void Weight::SetPlutoWeight (double pounds, double accConstant) {
-    weightFeltPluto = (pounds / accConstant) * PLUTO_AG;
+    userPounds = (pounds / accConstant) * PLUTO_AG;
     return;
     }
 
 double Weight::GetPlutoWeight () {
-    return weightFeltPluto;
+    return userPounds;
     }
 
 
@@ -184,44 +172,34 @@ double Weight::GetPlutoWeight () {
 void Weight::Print() {
    
    cout << "Your weight on Earth: ";
-   SetEarthWeight(userPounds, userAcc);
-   cout << weightFeltEarth << " pounds." << endl; 
+   cout << GetEarthWeight() << " pounds." << endl; 
    
    cout << "Your weight on the Moon: ";
-   SetMoonWeight(userPounds, userAcc);
-   cout << weightFeltMoon << " pounds." << endl;
+   cout << GetMoonWeight() << " pounds." << endl;
    
    cout << "Your weight on Mercury: ";
-   SetMercuryWeight(userPounds, userAcc);
-   cout << weightFeltMercury << " pounds." << endl;
+   cout << GetMercuryWeight() << " pounds." << endl;
    
    cout << "Your weight on Venus: ";
-   SetVenusWeight(userPounds, userAcc);
-   cout << weightFeltVenus << " pounds." << endl;
+   cout << GetVenusWeight() << " pounds." << endl;
    
    cout << "Your weight on Mars: ";
-   SetMarsWeight(userPounds, userAcc);
-   cout << weightFeltMars << " pounds." << endl;
+   cout << GetMarsWeight() << " pounds." << endl;
    
    cout << "Your weight on Jupiter: ";
-   SetJupiterWeight(userPounds, userAcc);
-   cout << weightFeltJupiter << " pounds...fatty." << endl;
+   cout << GetJupiterWeight() << " pounds...fatty." << endl;
    
    cout << "Your weight on Saturn: ";
-   SetSaturnWeight(userPounds, userAcc);
-   cout << weightFeltSaturn << " pounds." << endl;
+   cout << GetSaturnWeight() << " pounds." << endl;
    
    cout << "Your weight on Uranus: ";
-   SetUranusWeight(userPounds, userAcc);
-   cout << weightFeltUranus << " pounds." << endl;
+   cout << GetUranusWeight() << " pounds." << endl;
    
    cout << "Your weight on Neptune: ";
-   SetNeptuneWeight(userPounds, userAcc);
-   cout << weightFeltNeptune << " pounds." << endl;
+   cout << GetNeptuneWeight() << " pounds." << endl;
    
    cout << "Your weight on Pluto (which is still totally a planet duh): ";
-   SetPlutoWeight(userPounds, userAcc);
-   cout << weightFeltPluto << " pounds. Somebody needs a cheeseburger." << endl;
+   cout << GetPlutoWeight() << " pounds. Somebody needs a cheeseburger." << endl;
     
 }
 

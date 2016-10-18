@@ -33,27 +33,12 @@ void TimeBetween (int hour1, int minutes1, int hour2, int minutes2) {
     }
 } 
 
+//USER INPUT
+
 void UserTime(int hour1, int hour2) {
     int minutesDefault = 0;    
-    while (hour1 < hour2) {
-        while (minutesDefault <= 59) {
-            if (minutesDefault <=9) {
-                cout << hour1 << ":0" << minutesDefault << endl;
-            }
-            else {
-                cout << hour1 << ":" << minutesDefault << endl;
-            }
-        minutesDefault = minutesDefault + 15;     
-        }
-    minutesDefault = 0;
-    ++hour1;
-    }
-    
-    if (hour1 == hour2) {
-        cout << hour2 << ":00" << endl;
-    }
-    
-    while (hour1 > hour2) {
+
+    if (hour1 >= hour2) {
         while (hour1 <= 12) {
          while (minutesDefault <= 59) {
             if (minutesDefault <=9) {
@@ -67,11 +52,10 @@ void UserTime(int hour1, int hour2) {
     minutesDefault = 0;
     ++hour1;
     }
-        if (hour1 == hour2) {
-        cout << hour2 << ":00" << endl;
-    }
+    hour1 = 1;
 }
-    while (hour1 < hour2) {
+   
+   while (hour1 <= hour2) {
         while (minutesDefault <= 59) {
             if (minutesDefault <=9) {
                 cout << hour1 << ":0" << minutesDefault << endl;
@@ -85,10 +69,6 @@ void UserTime(int hour1, int hour2) {
     ++hour1;
     }
     
-    if (hour1 == hour2) {
-        cout << hour2 << ":00" << endl;
-    }
-
 }
 
 
