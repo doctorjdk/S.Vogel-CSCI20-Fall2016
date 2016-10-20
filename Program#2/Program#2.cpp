@@ -18,17 +18,7 @@ class Weight {
     public: 
         
         void SetEarthWeight(double pounds, double accConstant);
-        void SetMarsWeight(double pounds);
-        void SetJupiterWeight(double pounds);
-        void SetMoonWeight(double pounds);
-        void SetVenusWeight(double pounds);
-        void SetUranusWeight(double pounds);
-        void SetNeptuneWeight(double pounds);
-        void SetMercuryWeight(double pounds);
-        void SetSaturnWeight(double pounds);
-        void SetPlutoWeight(double pounds);
-        
-        
+   
         double GetEarthWeight();
         double GetMarsWeight();
         double GetJupiterWeight();
@@ -48,9 +38,10 @@ class Weight {
     private:  
         double userAcc;
         double userPounds;
+        double earthPounds;
         
 };
-//CONSTRUCTORS
+//CONSTRUCTOR
 Weight::Weight() {
     userPounds = 0.0;
     userAcc = 1.0;
@@ -61,109 +52,79 @@ Weight::Weight(double pounds, double accConstant) {
     userPounds = pounds;
     userAcc = accConstant;
     return;
-    }
+}
 
 
 //EARTH 
 void Weight::SetEarthWeight(double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * EARTH_AG;
+    earthPounds = (pounds / accConstant) * EARTH_AG;
     return;
     }
 
 double Weight::GetEarthWeight()  {
-    return userPounds; 
+    return earthPounds; 
     }
 
 
 //MARS
-void Weight::SetMarsWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * MARS_AG;
-    return;
-    }
-
-double Weight::GetMarsWeight() {
+double Weight::GetMarsWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * MARS_AG;
     return userPounds;
     }
-    
+
 
 //JUPITER
-void Weight::SetJupiterWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * JUPITER_AG;
-    return;
-    }
-
-double Weight::GetJupiterWeight() {
+double Weight::GetJupiterWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * JUPITER_AG;
     return userPounds;
     }
-    
+
 
 //MOON
-void Weight::SetMoonWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * MOON_AG;
-    return;
-    }
-
-double Weight::GetMoonWeight() {
+double Weight::GetMoonWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * MOON_AG;
     return userPounds;
     }
+
     
 //VENUS
-void Weight::SetVenusWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * VENUS_AG;
-    return;
-    }
-
-double Weight::GetVenusWeight() {
+double Weight::GetVenusWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * VENUS_AG;
     return userPounds;
     }
+
 
 //URANUS
-void Weight::SetUranusWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * URANUS_AG;
-    return;
-    }
-    
-double Weight::GetUranusWeight() {
+double Weight::GetUranusWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * URANUS_AG;
     return userPounds;
     }
+    
     
 //NEPTUNE
-void Weight::SetNeptuneWeight(double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * NEPTUNE_AG;
-    return;
-    }
-
 double Weight::GetNeptuneWeight() {
+    userPounds = (GetEarthWeight() / EARTH_AG) * NEPTUNE_AG;
     return userPounds;
     }
+
 
 //MERCURY
-void Weight::SetMercuryWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * MERCURY_AG;
-    return;
-    }
-
-double Weight::GetMercuryWeight() {
+double Weight::GetMercuryWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * MERCURY_AG;
     return userPounds;
     }
+
 
 //SATURN
-void Weight::SetSaturnWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * SATURN_AG;
-    return;
-    }
-
-double Weight::GetSaturnWeight() {
+double Weight::GetSaturnWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * SATURN_AG;
     return userPounds;
     }
+
     
 //PLUTO
-void Weight::SetPlutoWeight (double userPounds) {
-    userPounds = (userPounds / EARTH_AG) * PLUTO_AG;
-    return;
-    }
-
 double Weight::GetPlutoWeight () {
+    userPounds = (GetEarthWeight() / EARTH_AG) * PLUTO_AG;
     return userPounds;
     }
 
@@ -209,7 +170,7 @@ void Weight::Print() {
 int main() {
     
     Weight user1;
-    user1.SetEarthWeight(150, MARS_AG);
+    user1.SetEarthWeight(150, EARTH_AG);
     user1.Print();
     
 }
