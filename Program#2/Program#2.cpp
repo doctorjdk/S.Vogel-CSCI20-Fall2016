@@ -18,15 +18,15 @@ class Weight {
     public: 
         
         void SetEarthWeight(double pounds, double accConstant);
-        void SetMarsWeight(double pounds, double accConstant);
-        void SetJupiterWeight(double pounds, double accConstant);
-        void SetMoonWeight(double pounds, double accConstant);
-        void SetVenusWeight(double pounds, double accConstant);
-        void SetUranusWeight(double pounds, double accConstant);
-        void SetNeptuneWeight(double pounds, double accConstant);
-        void SetMercuryWeight(double pounds, double accConstant);
-        void SetSaturnWeight(double pounds, double accConstant);
-        void SetPlutoWeight(double pounds, double accConstant);
+        void SetMarsWeight(double pounds);
+        void SetJupiterWeight(double pounds);
+        void SetMoonWeight(double pounds);
+        void SetVenusWeight(double pounds);
+        void SetUranusWeight(double pounds);
+        void SetNeptuneWeight(double pounds);
+        void SetMercuryWeight(double pounds);
+        void SetSaturnWeight(double pounds);
+        void SetPlutoWeight(double pounds);
         
         
         double GetEarthWeight();
@@ -76,8 +76,8 @@ double Weight::GetEarthWeight()  {
 
 
 //MARS
-void Weight::SetMarsWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * MARS_AG;
+void Weight::SetMarsWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * MARS_AG;
     return;
     }
 
@@ -87,8 +87,8 @@ double Weight::GetMarsWeight() {
     
 
 //JUPITER
-void Weight::SetJupiterWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * JUPITER_AG;
+void Weight::SetJupiterWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * JUPITER_AG;
     return;
     }
 
@@ -98,8 +98,8 @@ double Weight::GetJupiterWeight() {
     
 
 //MOON
-void Weight::SetMoonWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * MOON_AG;
+void Weight::SetMoonWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * MOON_AG;
     return;
     }
 
@@ -108,8 +108,8 @@ double Weight::GetMoonWeight() {
     }
     
 //VENUS
-void Weight::SetVenusWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * VENUS_AG;
+void Weight::SetVenusWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * VENUS_AG;
     return;
     }
 
@@ -118,8 +118,8 @@ double Weight::GetVenusWeight() {
     }
 
 //URANUS
-void Weight::SetUranusWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * URANUS_AG;
+void Weight::SetUranusWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * URANUS_AG;
     return;
     }
     
@@ -128,8 +128,8 @@ double Weight::GetUranusWeight() {
     }
     
 //NEPTUNE
-void Weight::SetNeptuneWeight(double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * NEPTUNE_AG;
+void Weight::SetNeptuneWeight(double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * NEPTUNE_AG;
     return;
     }
 
@@ -138,8 +138,8 @@ double Weight::GetNeptuneWeight() {
     }
 
 //MERCURY
-void Weight::SetMercuryWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * MERCURY_AG;
+void Weight::SetMercuryWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * MERCURY_AG;
     return;
     }
 
@@ -148,8 +148,8 @@ double Weight::GetMercuryWeight() {
     }
 
 //SATURN
-void Weight::SetSaturnWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * SATURN_AG;
+void Weight::SetSaturnWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * SATURN_AG;
     return;
     }
 
@@ -158,8 +158,8 @@ double Weight::GetSaturnWeight() {
     }
     
 //PLUTO
-void Weight::SetPlutoWeight (double pounds, double accConstant) {
-    userPounds = (pounds / accConstant) * PLUTO_AG;
+void Weight::SetPlutoWeight (double userPounds) {
+    userPounds = (userPounds / EARTH_AG) * PLUTO_AG;
     return;
     }
 
@@ -208,7 +208,8 @@ void Weight::Print() {
 
 int main() {
     
-    Weight user1(156, MOON_AG); 
+    Weight user1;
+    user1.SetEarthWeight(150, MARS_AG);
     user1.Print();
     
 }
