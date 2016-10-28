@@ -10,7 +10,8 @@ int j = 0;
 
 //PRINTS MENU and ACCEPTS ORDER storing in Order[] Array
 void PrintMenu() {
-        
+    
+    cout << "Menu: " << endl;    
     cout << "1. Salad" << endl;
     cout << "2. Grilled Cheese" << endl;
     cout << "3. Tomato Soup" << endl;
