@@ -42,7 +42,7 @@ void PrintChoices (int array[]) {
         cout << Menu[array[j] - 1] << ", ";
         totalCost = totalCost + Price[array[j] - 1];
         ++j;
-    }
+        }
     cout << endl << "Total Cost: $" << totalCost;
 }
     

@@ -25,10 +25,10 @@ void PrintMenu() {
     
     cout << "What'll you be having then? Enter meal number(s). Type '0' when finished." << endl;
     
-    for (i = 0; i < 100; ++i) {
+    for (i = 0; i < 100 && Order[i] !=0; ++i) {
         cin >> Order[i];
         if (Order[i] == 0) {
-            break;
+            /*cigarette*/ break;
         }
     }
 }
