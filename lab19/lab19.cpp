@@ -24,11 +24,10 @@ using namespace std;
 
 //OPEN FILE FUNCTION
 void GetFile() {
-    //cout << "Choose a file to use: ";
-    //cin >> userFile;
+    cout << "Choose a file to use: ";
+    cin >> userFile;
     cout << "Opening file" << userFile << "...." << endl;
-    fileFS.open("lab19file.txt");
-    //fileFS.open(userFile); 
+    fileFS.open(userFile); 
     if(!fileFS.is_open()) {
         cout << "Could not open file." << endl;
         return;
